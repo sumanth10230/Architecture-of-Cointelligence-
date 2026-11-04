@@ -1,0 +1,79 @@
+[
+  {
+    "title": "01 — Digital Prototype — Circle Packing & Dual Graph",
+    "src": "/images/digital-studies/1.webp",
+    "images": [
+      "/images/digital-studies/1.webp",
+      "/images/digital-studies/1.5.webp"
+    ],
+    "description": "Circle packing translates bubble-cluster principles into a controllable digital field, with variable radii reflecting species-specific spatial requirements. Delaunay triangulation and its Voronoi dual establish spatial relationships, while particle–spring relaxation minimises overlaps and balances forces. The resulting system accommodates varying densities, scales, and clusters within a stable spatial network."
+  },
+  {
+    "title": "02 — Programmatic Organisation — Adjacency-Based Relationships",
+    "src": "/images/digital-studies/2.webp",
+    "images": [
+      "/images/digital-studies/2.webp"
+    ],
+    "description": "Programmatic organisation begins with weighted adjacencies (0–1) between seed-processing, technical and plant-support, and public and staff spaces. A spring-based solver draws interdependent functions together while separating weaker relationships, generating spatial arrangements driven by operational workflows rather than fixed layouts. This enables efficient circulation and adaptable masterplan organisation."
+  },
+  {
+    "title": "03 — Multi-Factor Spatial Optimisation",
+    "src": "/images/digital-studies/3.webp",
+    "images": [
+      "/images/digital-studies/3.webp",
+      "/images/digital-studies/3.1.webp",
+      "/images/digital-studies/3.2.webp"
+    ],
+    "description": "Multi-factor optimisation positions primary programmes and plant micro-clusters through normalised spatial fields of accessibility, infrastructure, terrain, and climate. Weighted attraction and repulsion forces prioritise operational connectivity for seed-bank functions and ecological suitability for species clusters, enabling dynamic spatial redistribution and adaptive masterplanning across varying site conditions."
+  },
+  {
+    "title": "04 — Subdivision–Stress Feedback",
+    "src": "/images/digital-studies/4.webp",
+    "images": [
+      "/images/digital-studies/4.webp"
+    ],
+    "description": "Insights from the physical prototype are translated into a digital simulation to evaluate the relationship between subdivision density and structural response. Increasing subdivisions introduces greater membrane constraints, reducing vertical displacement and overhead height. This reveals how internal spatial differentiation directly influences structural behaviour and the overall geometry of the tensile system."
+  },
+  {
+    "title": "05 — Single-Point Vector Control",
+    "src": "/images/digital-studies/5.webp",
+    "images": [
+      "/images/digital-studies/5.webp"
+    ],
+    "description": "Single-point vector activation isolates localised deformation within the tensile system. By varying the distance between the applied vector and target cell, changes in geometry and spatial behaviour are systematically evaluated. This reveals how proximity and directional forces influence subdivision, enabling precise control over local spatial configurations."
+  },
+  {
+    "title": "06 — Vector Ruleset for Spatial Generation",
+    "src": "/images/digital-studies/6.webp",
+    "images": [
+      "/images/digital-studies/6.webp"
+    ],
+    "description": "A vector-based ruleset translates directional forces into differentiated spatial configurations within the tensile system. By encoding relationships between structural behaviour and cell subdivision, it generates spatial typologies with varying climatic performance, accessibility, openness, and connectivity. These vectorial blueprints establish a systematic framework for adaptive spatial generation."
+  },
+  {
+    "title": "07 — Cell Interaction & Adaptive Merging",
+    "src": "/images/digital-studies/7.webp",
+    "images": [
+      "/images/digital-studies/7.webp"
+    ],
+    "description": "Cell interaction is governed by shared access points and climatic compatibility. Isolated cells can establish connections through released edges, while pulling vectors enable merging only between cells with identical climatic requirements. Following plant growth cycles, boundaries are reassessed, allowing adaptive reconfiguration based on the ecological needs of successive species."
+  },
+  {
+    "title": "08 — Digital Exploration of Performative Skin",
+    "src": "/images/digital-studies/8.webp",
+    "images": [
+      "/images/digital-studies/8.webp",
+      "/images/digital-studies/8.5.webp"
+    ],
+    "description": "The deformation of the exterior surface, driven by digital vector inputs, responds to water harvesting and solar heat gain, supporting plant growth beneath the skin."
+  },
+  {
+    "title": "09 — Encoding Architectural Intelligence Through Vectorial Data",
+    "src": "/images/digital-studies/9.webp",
+    "images": [
+      "/images/digital-studies/9.webp",
+      "/images/digital-studies/9.5.webp"
+    ],
+    "description": "Through spatial subdivisions and material strategies, synthetic data is encoded into vectorial parameters defining relationships between the mainframe and individual cells. These numerical values capture geometric, structural, and environmental performance, forming a computational ruleset that translates complex spatial conditions into actionable instructions for adaptive architectural behaviour."
+  }
+]

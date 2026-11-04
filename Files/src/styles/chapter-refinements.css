@@ -1,0 +1,54 @@
+/* Shared chapter scale: between the former 3.6vw methodology and 5.8vw film titles. */
+.thesis-chapter[data-kind] .chapter-copy h2{font-size:clamp(38px,4.6vw,76px);font-weight:400;line-height:1.06;letter-spacing:-.05em;margin-bottom:24px}
+.thesis-chapter[data-kind='methodology'] .chapter-copy{top:50%}
+.chapter-body{max-width:440px;line-height:1.65}
+
+.workflow-shade{position:absolute;inset:0;background:#000;opacity:0;z-index:2;pointer-events:none}
+.workflow-studies{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:54%;height:min(76svh,790px);margin:0;z-index:3;opacity:0;visibility:hidden;display:flex;flex-direction:column;align-items:center;color:#ddd;pointer-events:none}
+ .workflow-studies>img{width:100%;height:calc(100% - 65px);min-height:0;object-fit:contain}
+.workflow-studies figcaption{font-size:10px;letter-spacing:.08em;margin-top:10px;color:#aaa}
+.workflow-expand{pointer-events:auto;margin-top:12px;font-size:11px;color:#ddd;background:transparent}
+.workflow-expand svg{width:16px;height:16px}
+.workflow-dialog{width:min(1500px,96vw);max-width:96vw;background:#111;color:#eee;padding:48px 30px 28px}
+.workflow-dialog h2{font-size:24px;font-weight:400;margin-bottom:24px}
+.workflow-dialog p{font-size:13px;line-height:1.6;max-width:850px;margin-top:20px;color:#bbb}
+.workflow-dialog .dialog-close{color:#fff}
+.workflow-zoom{overflow:auto;max-height:72svh}
+.workflow-zoom img{display:block;width:100%;min-width:1000px;height:auto;max-width:none}
+
+.model-hotspot{position:absolute;left:37%;top:38%;width:48%;height:43%;z-index:6;background:transparent;border:0;color:white;cursor:help;padding:0;pointer-events:auto}
+.model-hotspot[hidden]{display:none}
+.model-hotspot-detail{left:4%;top:43%;width:92%;height:51%}
+.model-hotspot:focus-visible{outline:1px dashed #ffffff80;outline-offset:5px;border-radius:12px}
+ .model-tooltip{position:absolute;left:var(--bubble-left,0px);top:var(--bubble-top,0px);display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:230px;height:230px;background:rgba(0,0,0,.72);color:#fff;padding:34px;border:1px solid #ffffff26;border-radius:50%;text-align:center;font-size:12px;line-height:1.55;font-weight:400;opacity:0;visibility:hidden;transform:scale(.94);transition:opacity .25s ease,transform .25s ease,visibility .25s;pointer-events:none;box-shadow:0 8px 30px #0002}
+.model-hotspot[aria-expanded='true'] .model-tooltip{opacity:1;visibility:visible;transform:scale(1)}
+
+@media(max-width:800px){
+ .thesis-chapter[data-kind] .chapter-copy h2{font-size:clamp(32px,6.4vw,50px);margin-bottom:18px}
+ .thesis-chapter[data-kind='methodology'] .chapter-copy{top:11%}
+ .workflow-studies{right:54px;left:var(--gutter);top:auto;bottom:90px;transform:none;width:auto;height:43svh}
+ .thesis-chapter[data-overlay='species'] .chapter-stage,.thesis-chapter[data-overlay='masterplan'] .chapter-stage{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,1.05fr);gap:16px;padding:90px 54px 90px var(--gutter)}
+ .thesis-chapter[data-overlay='species'] .chapter-copy,.thesis-chapter[data-overlay='masterplan'] .chapter-copy{position:relative;top:auto;left:auto;transform:none;width:100%;max-width:none;overflow-y:auto;pointer-events:auto;order:0;scrollbar-width:thin}
+ .thesis-chapter[data-overlay='species'] .workflow-studies,.thesis-chapter[data-overlay='masterplan'] .workflow-studies{position:relative;inset:auto;transform:none;width:100%;height:100%;min-height:0;order:1}
+ .workflow-studies figcaption{font-size:9px}
+ .model-hotspot{left:28%;top:51%;width:60%;height:34%}
+ .model-hotspot-detail{left:4%;top:50%;width:92%;height:43%}
+
+}
+@media(max-height:600px) and (min-width:801px){
+ .thesis-chapter[data-kind] .chapter-copy h2{font-size:34px;margin-bottom:15px}
+ .chapter-body{font-size:12px;line-height:1.5}
+ .workflow-studies{height:78svh}
+}
+@media(prefers-reduced-motion:reduce),(scripting:none){
+ .thesis-chapter[data-overlay='species'],.thesis-chapter[data-overlay='masterplan']{height:auto;min-height:100svh}
+ .thesis-chapter[data-overlay='species'] .chapter-stage,.thesis-chapter[data-overlay='masterplan'] .chapter-stage{position:relative;height:auto;min-height:100svh;display:flex;flex-direction:column;padding:100px var(--gutter)}
+ .thesis-chapter[data-overlay='species'] .chapter-copy,.thesis-chapter[data-overlay='masterplan'] .chapter-copy{position:relative;inset:auto;transform:none;width:100%;max-width:600px;order:0;overflow:visible}
+ .workflow-shade{opacity:.94}
+ .thesis-chapter .workflow-studies{position:relative;inset:auto;transform:none;opacity:1;visibility:visible;width:100%;height:auto;max-width:700px;margin:40px auto 0;order:1}
+ .workflow-studies>img{height:auto}
+ .model-hotspot{position:relative;inset:auto;width:100%;height:auto;margin:24px 0;display:block;background:#000;padding:20px;border-radius:6px;order:4;cursor:default}
+ .model-info{display:none}
+ .model-tooltip{position:static;width:auto;height:auto;border-radius:0;max-width:none;opacity:1;visibility:visible;transform:none;padding:0;border:0;box-shadow:none}
+ .thesis-chapter[data-kind='methodology'] .chapter-copy{top:auto}
+}

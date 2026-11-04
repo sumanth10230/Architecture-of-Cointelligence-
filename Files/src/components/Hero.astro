@@ -1,0 +1,21 @@
+---
+import { site } from '../data/site';
+import Icon from './Icon.astro';
+---
+<section class="hero" id="top" aria-label="Architecture of co intelligence — interactive film">
+  <div class="hero-stage">
+    <img class="hero-poster" src={site.hero.poster} alt="An experimental architectural membrane supported by a field of actuators" width="1920" height="1080" fetchpriority="high" />
+    <video class="hero-video" muted playsinline preload="none" poster={site.hero.poster} data-desktop={site.hero.video} data-mobile={site.hero.mobileVideo} aria-hidden="true" tabindex="-1"></video>
+    <div class="hero-shade"></div>
+    <div class="hero-copy hero-intro">
+      <p class="eyebrow hero-credit"><span>AADRL</span><span aria-hidden="true">/</span><span>Spyropoulos Studio</span><span aria-hidden="true">/</span><span>2026</span></p>
+      <h1>Architecture of<br /><span>Co-Intelligence</span></h1>
+    </div>
+    <div class="hero-copy hero-second" aria-hidden="true"><p class="eyebrow">Sense / Adapt / Sustain</p><p class="hero-statement">{site.hero.secondStatement.split('\n').map(line => <span>{line}</span>)}</p></div>
+    <div class="scene-dissolve" aria-hidden="true"></div>
+    <div class="hero-bottom"><a class="scroll-cue" href="#chapter-01"><span class="scrub-hint">Scroll to explore</span><Icon name="down" /></a><span class="film-caption">A work in progress</span><span class="film-progress" aria-hidden="true">00 — 100</span></div>
+    <div class="film-line" aria-hidden="true"><span></span></div>
+    <div class="film-fallback" hidden><span role="status">Still-image experience</span><button type="button" class="enable-film">Enable interactive film</button></div>
+    <noscript><style>.hero{height:100svh}.hero-stage{position:relative}.scrub-hint{font-size:0}.scrub-hint:after{content:'Explore thesis studies';font-size:12px}</style></noscript>
+  </div>
+</section>

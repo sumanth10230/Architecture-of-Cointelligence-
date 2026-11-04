@@ -1,0 +1,13 @@
+/* One quiet topic cue; the full index opens only on request. */
+.chapter-index{position:fixed;z-index:34;left:var(--gutter);top:82px;color:#292929;max-width:calc(100vw - 100px)}
+.chapter-index[data-tone='light']{color:#f4f4ef}
+.chapter-index summary{display:flex;align-items:center;gap:10px;min-height:32px;font-size:10px;letter-spacing:.025em;list-style:none;cursor:pointer;opacity:.8;text-shadow:0 1px 8px #8883}
+.chapter-index summary::-webkit-details-marker{display:none}
+.chapter-index-count{font-size:9px;opacity:.6;font-variant-numeric:tabular-nums}
+.chapter-index-toggle{font-size:16px;transition:transform .2s}.chapter-index details[open] .chapter-index-toggle{transform:rotate(45deg)}
+.chapter-index ol{list-style:none;position:absolute;top:38px;left:0;width:min(330px,calc(100vw - 90px));max-height:calc(100svh - 170px);overflow:auto;margin:0;padding:12px;background:#f4f4f0f7;color:#292929;box-shadow:0 12px 36px #0002;overscroll-behavior:contain}
+.chapter-index a{display:flex;align-items:center;gap:12px;min-height:40px;padding:7px;font-size:11px;line-height:1.35;opacity:.6;transition:opacity .2s,transform .25s}
+.chapter-index a[aria-current='location']{opacity:1;transform:translateX(3px)}
+.chapter-index a:hover,.chapter-index a:focus-visible{opacity:1}.chapter-index-number{font-size:9px;opacity:.65}.chapter-index-title{flex:1}.chapter-index-mark{height:3px;width:3px;border-radius:50%;background:currentColor}
+@media(max-width:800px){.chapter-index{top:67px}.chapter-index summary{font-size:9px;gap:7px}.chapter-index-count{display:none}}
+@media(prefers-reduced-motion:reduce){.chapter-index a,.chapter-index-toggle{transition:none}.chapter-index a[aria-current='location']{transform:none}}

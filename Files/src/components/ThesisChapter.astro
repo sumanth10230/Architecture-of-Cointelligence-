@@ -1,0 +1,51 @@
+---
+import type { ThesisChapter } from '../data/chapters';
+import Icon from './Icon.astro';
+import GlobeScene from './GlobeScene.astro';
+import CardsScene from './CardsScene.astro';
+import TensileStudies from './TensileStudies.astro';
+import BiomeStudies from './BiomeStudies.astro';
+import WorkflowStudies from './WorkflowStudies.astro';
+import MethodologyScene from './MethodologyScene.astro';
+interface Props { chapter: ThesisChapter; next: string; }
+const { chapter, next } = Astro.props;
+const n = Number(chapter.number);
+const researchLabel = chapter.overlay === 'species' ? 'Expand study on AI research'
+  : chapter.overlay === 'masterplan' ? 'Expand study for master planning strategy'
+  : chapter.id === 'chapter-08' ? 'Expand architectural taxonomy' : undefined;
+---
+<section id={chapter.id} class="thesis-chapter" data-kind={chapter.kind || 'placeholder'} style={`--scene-height:${100 + (chapter.scrollVh || 225)}svh`} data-duration={chapter.duration} data-overlay={chapter.overlay} data-variant={n % 4} aria-labelledby={`${chapter.id}-heading`}>
+  <div class="chapter-stage">
+    <div class="chapter-visual" aria-hidden={chapter.kind === 'finale' ? undefined : 'true'}>
+      {chapter.poster && <picture>{chapter.mobilePoster && <source media="(max-width: 800px)" srcset={chapter.mobilePoster} />}<img class="chapter-poster" src={chapter.poster} loading="lazy" alt={chapter.kind === 'finale' ? 'Intelligent Biome: a connected architectural canopy within a mist-covered forest' : ''} /></picture>}
+      {!chapter.kind && <svg class="chapter-drawing" viewBox="0 0 1000 1000" fill="none">
+        {Array.from({length:24},(_,i) => <ellipse cx="500" cy={420 + i * 9} rx={140 + i * 11} ry={90 + i * 7} transform={`rotate(${n * 12 + i * 2} 500 500)`} />)}
+        <path class="drawing-axis" d="M500 80V920 M80 500H920" />
+        <circle cx="500" cy="500" r="4" fill="currentColor" stroke="none" />
+      </svg>}
+    </div>
+    <video class="chapter-video" muted playsinline loop={chapter.kind === 'loop'} preload="none" poster={chapter.poster || undefined} data-desktop={chapter.video} data-mobile={chapter.mobileVideo} aria-hidden="true" tabindex="-1"></video>
+    <div class="chapter-legibility" aria-hidden="true"></div>
+    {chapter.kind === 'globe' && <GlobeScene />}
+    {chapter.kind === 'cards' && <CardsScene />}
+    {chapter.kind === 'study' && <TensileStudies detailImage={chapter.detailImage} />}
+    {chapter.overlay === 'biomes' && <BiomeStudies />}
+    {(chapter.overlay === 'species' || chapter.overlay === 'masterplan') && <WorkflowStudies kind={chapter.overlay} />}
+    {chapter.kind === 'methodology' && <MethodologyScene />}
+    <div class:list={["chapter-copy", { "finale-caption": chapter.kind === "finale" }]} >
+      <div class="chapter-copy-content">
+      <h2 id={`${chapter.id}-heading`}>{chapter.title.split('\n').map(line => <span>{line}</span>)}</h2>
+      {chapter.subtitle && <h3 class="chapter-subtitle">{chapter.subtitle}</h3>}
+      <p class="chapter-body">{chapter.body}</p>
+      </div>
+    </div>
+    <div class="scene-dissolve" aria-hidden="true"></div>
+    {chapter.kind !== 'finale' && <div class="chapter-bottom"><span class="chapter-media-label">{chapter.kind === 'loop' ? 'A study in continuous motion' : chapter.video ? 'Scroll to move through the film' : ''}</span><a href={next}> {next === '#work' ? 'Explore studies' : 'Continue'} <Icon name="down" /></a></div>}
+    {chapter.kind === 'loop' && <div class="chapter-film-actions">
+      {researchLabel && <a class="chapter-research-link" href="#research">{researchLabel} <span aria-hidden="true">↗</span></a>}
+      <button class="chapter-playback" type="button" aria-pressed="false" hidden>Pause film</button>
+    </div>}
+    <div class="chapter-track" aria-hidden="true"><span></span></div>
+    <div class="chapter-fallback" hidden><span role="status"></span><button type="button">Enable film</button></div>
+  </div>
+</section>

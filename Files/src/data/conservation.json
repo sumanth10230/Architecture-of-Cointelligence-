@@ -1,0 +1,70 @@
+{
+  "checked": "2026-10-13",
+  "mode": "Dated public reports · not a live feed",
+  "global": {
+    "value": "49,505",
+    "label": "species threatened worldwide",
+    "date": "9 July 2026",
+    "source": "IUCN Red List",
+    "url": "https://iucn.org/press-release/202607/desert-frog-deep-sea-molluscs-remarkable-species-risk-iucn-red-list",
+    "detail": "49,505 of 175,909 assessed species were threatened in the July 2026 release. Threatened means Vulnerable, Endangered or Critically Endangered; these are not recorded extinctions. The Red List does not assess every species on Earth."
+  },
+  "kew": {
+    "value": "45%",
+    "label": "of flowering plant species estimated at risk globally",
+    "date": "2023 estimate",
+    "url": "https://www.kew.org/read-and-watch/sotwpf-2023-summary",
+    "detail": "A model-based global estimate from Kew's 2023 report, not a continent count or a count of extinct species. Retained as a dated research reference, not presented as the latest Kew report."
+  },
+  "regions": [
+    {
+      "id": "north-america", "name": "North America", "lon": -102, "lat": 40,
+      "value": "34%", "label": "U.S. plants at risk", "date": "2023",
+      "scope": "United States plants assessed by NatureServe; not a North American total.",
+      "source": "NatureServe · Biodiversity in Focus", "url": "https://www.natureserve.org/bif",
+      "detail": "NatureServe reports 34% of U.S. plant species at risk of extinction. Its conservation-status system is distinct from IUCN categories."
+    },
+    {
+      "id": "south-america", "name": "South America", "lon": -60, "lat": -15,
+      "value": "3,356", "label": "tree species threatened", "date": "28 Oct 2024",
+      "scope": "South American trees: 13,668 species assessed; not all species on the continent.",
+      "source": "IUCN · Global Tree Assessment", "url": "https://iucn.org/press-release/202410/more-one-three-tree-species-worldwide-faces-extinction-iucn-red-list",
+      "detail": "3,356 of 13,668 assessed tree species in South America are at risk of extinction."
+    },
+    {
+      "id": "europe", "name": "Europe", "lon": 18, "lat": 53,
+      "value": "172", "label": "wild bee species threatened", "date": "2026 report",
+      "scope": "European wild bees; not a count of all threatened European species.",
+      "source": "IUCN · European Red List of Bees", "url": "https://nrl.iucnredlist.org/resources/michezetal2026",
+      "detail": "The 2026 report identifies 172 European bee species as threatened, including 14 flagged as Possibly Extinct. Possibly Extinct is not a confirmed extinction."
+    },
+    {
+      "id": "africa", "name": "Africa", "lon": 22, "lat": 0,
+      "value": "31.7%", "label": "tropical flora potentially at risk", "date": "2019 study",
+      "scope": "Tropical African vascular plants in a preliminary model; not a formal continent-wide Red List count.",
+      "source": "Stévart et al. · Kew and research partners", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6867875/",
+      "detail": "The study estimates 31.7% of tropical African vascular plant species as potentially or likely threatened. This is a preliminary automated assessment, not confirmed extinctions."
+    },
+    {
+      "id": "asia", "name": "Asia", "lon": 102, "lat": 24,
+      "value": "522", "label": "Indo-Burma plants threatened", "date": "2021 data · 2022 report",
+      "scope": "2,979 assessed plant species in Indo-Burma; not an Asian total.",
+      "source": "IUCN · Indo-Burma Wetland Outlook", "url": "https://iucn.org/sites/default/files/2022-11/indo-burma-wetland-outlook-2022_v4.5_pages-.pdf#page=46",
+      "detail": "The report states that 522 of 2,979 assessed Indo-Burma plant species are globally threatened. Data sources were accessed in June 2021 (report pages 46–49)."
+    },
+    {
+      "id": "oceania", "name": "Oceania", "lon": 135, "lat": -25,
+      "value": "≈2,000", "label": "Australian species listed threatened", "date": "8 Sep 2025",
+      "scope": "Australian plants and animals listed threatened; not an Oceania-wide count.",
+      "source": "Queensland Government · DETSI", "url": "https://www.detsi.qld.gov.au/our-department/news-media/mediareleases/2025/1-million-for-threatened-species-recovery",
+      "detail": "The government release describes almost 2,000 Australian plant and animal species listed as threatened. This national listing is distinct from a global IUCN assessment."
+    },
+    {
+      "id": "antarctica", "name": "Antarctica", "lon": 30, "lat": -74,
+      "value": "2", "label": "highlighted species now Endangered", "date": "9 Apr 2026",
+      "scope": "Two named cases: emperor penguin and Antarctic fur seal. Not a total for Antarctica.",
+      "source": "IUCN · Antarctic species update", "url": "https://iucn.org/press-release/202604/emperor-penguin-and-antarctic-fur-seal-now-endangered-due-climate-change-iucn",
+      "detail": "Both species were reported as Endangered in April 2026. This label highlights the two reassessments in that release, not all threatened Antarctic species."
+    }
+  ]
+}

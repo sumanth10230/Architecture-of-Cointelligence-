@@ -1,0 +1,17 @@
+---
+interface Slide { src?: string; alt: string; caption?: string; srcset?: string; }
+interface Props { slides: Slide[]; label: string; full?: boolean; auto?: boolean; interval?:number; transition?:'slide'|'fade'; }
+const {slides,label,full=false,auto=false,interval=3000,transition='slide'}=Astro.props;
+---
+<div class:list={['image-carousel',{'carousel-full':full}]} data-carousel data-interval={interval} data-transition={transition} data-auto={auto ? "true" : undefined} role="region" aria-roledescription="carousel" aria-label={label} tabindex="0">
+  <div class="carousel-viewport">
+    <div class="carousel-track">
+      {slides.map((slide,index)=><div class="carousel-slide" role="group" aria-roledescription="slide" aria-label={`${index+1} of ${slides.length}`} aria-hidden={index===0 ? undefined : 'true'} inert={index!==0}>
+        {slide.src ? <img src={slide.src} srcset={slide.srcset} sizes={slide.srcset ? "100vw" : undefined} alt={slide.alt} loading="lazy" decoding="async" /> : <div class="render-placeholder"><span>Intelligent Biome</span><p>Render {String(index+1).padStart(2,'0')}</p><small>Image to follow</small></div>}
+        {slide.caption && <p class="carousel-caption">{slide.caption}</p>}
+      </div>)}
+    </div>
+  </div>
+  <div class:list={["carousel-footer", {"has-study-caption":Astro.slots.has("heading")}]}><div class="carousel-heading"><slot name="heading" /></div><div class="carousel-controls"><button type="button" data-previous aria-label={`Previous image in ${label}`} disabled>←</button><span data-slide-count aria-live={auto ? "off" : "polite"} aria-atomic="true">01 / {String(slides.length).padStart(2,'0')}</span><button type="button" data-next aria-label={`Next image in ${label}`}>→</button>{auto && <button type="button" data-autoplay aria-label="Pause slideshow" aria-pressed="false">Ⅱ</button>}</div><div class="carousel-action"><slot name="action" /></div></div>
+</div>
+<script>import {installCarousels} from '../scripts/carousels'; installCarousels();</script>

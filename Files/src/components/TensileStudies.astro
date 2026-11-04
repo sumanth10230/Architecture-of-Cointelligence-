@@ -1,0 +1,28 @@
+---
+import studies from '../data/tensile-studies.json';
+interface Props { detailImage?: string; }
+const { detailImage } = Astro.props;
+---
+<button type="button" class="model-hotspot model-hotspot-first" data-model="first" aria-label="About the single-layer prototype" aria-expanded="false" aria-describedby="model-first-description" hidden>
+  
+  <span class="model-tooltip" id="model-first-description">Prototype explores adaptive movement in a single-layer tensile membrane, using weather data to drive motorised actuation.</span>
+</button>
+<div class="study-shade" aria-hidden="true"></div>
+<div class="tensile-studies" aria-label="Four paired tensile-system iterations">
+  {studies.map(study => <figure class="tensile-pair">
+    <div class="tensile-images">{study.images.map((image, index) => <a href={image} target="_blank" rel="noopener noreferrer" aria-label={`Inspect iteration ${study.iteration}, ${index === 0 ? 'initial' : 'relaxed'} diagram`}><img src={image} loading="lazy" decoding="async" width="1000" height="526" alt={`Iteration ${study.iteration}: ${index === 0 ? 'initial force and anchor arrangement' : 'relaxed tensile form'}`} /></a>)}</div>
+    <figcaption><span>iteration {study.iteration}</span><span>direction force {study.force}</span><span>anchors {study.anchors}</span></figcaption>
+  </figure>)}
+</div>
+
+{detailImage && <>
+  <div class="study-detail" aria-label="Tensile prototype: layered surface and pylon study">
+    <picture><source media="(max-width: 800px)" srcset="/images/tensile/system-detail-mobile.webp" /><img src={detailImage} width="2560" height="1280" loading="lazy" alt="Two-layer tensile prototype with raised pylons and an explanatory section diagram" /></picture>
+    <div class="study-detail-shade" aria-hidden="true"></div>
+    <button type="button" class="model-hotspot model-hotspot-detail" data-model="detail" aria-label="About the double-layer prototype" aria-expanded="false" aria-describedby="model-detail-description" hidden>
+      
+      <span class="model-tooltip" id="model-detail-description">Evolving from a single to double-layer tensile system, the prototype explores spatial formation and subdivision within one canopy.</span>
+    </button>
+  </div>
+  <div class="study-dip" aria-hidden="true"></div>
+</>}

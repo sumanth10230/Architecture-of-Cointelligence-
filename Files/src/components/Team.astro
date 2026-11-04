@@ -1,0 +1,18 @@
+---
+import {team,teamPhoto,acknowledgements} from '../data/site';
+---
+<section id="about" class="section team-section" aria-labelledby="team-heading">
+ <div class="section-heading"><h2 id="team-heading">Core team</h2><p>Architecture of Co-Intelligence</p></div>
+ <div class="team-group">
+  <img class="team-group-photo" src={teamPhoto.src} alt={teamPhoto.alt} width={teamPhoto.width} height={teamPhoto.height} loading="lazy" decoding="async" />
+  <div class="team-grid">{team.map(person=><article class="team-person">
+   <div class="team-identity"><h3>{person.name}</h3><p class="team-position">{person.position}</p></div>
+   <div class="team-links">{[{label:'LinkedIn',href:person.linkedin},{label:'Instagram',href:person.instagram},{label:'Email',href:person.email ? `mailto:${person.email}` : null}].map(link=>link.href ? <a href={link.href} target={link.label==='Email'?undefined:'_blank'} rel="noopener noreferrer">{link.label} ↗</a> : <span aria-disabled="true" title={`${person.name}'s ${link.label} details to be added`}>{link.label} ↗</span>)}</div>
+  </article>)}</div>
+ </div>
+ <div class="acknowledgements"><p class="eyebrow">Acknowledgements</p><div class="studio-credit">
+  <img class="mentor-portrait" src={acknowledgements.image} alt={acknowledgements.name} width="648" height="810" loading="lazy" decoding="async" />
+  <div class="mentor-copy"><h3>{acknowledgements.name}</h3><p class="mentor-role">{acknowledgements.role}</p><p>{acknowledgements.description}</p></div>
+  <div class="other-tutors"><div class="course-credit"><h3>Course Tutors</h3><ul>{acknowledgements.courseTutors.map(name=><li>{name}</li>)}</ul></div><div class="course-credit"><h3>Course Masters</h3><ul>{acknowledgements.courseMasters.map(name=><li>{name}</li>)}</ul></div></div>
+ </div></div>
+</section>

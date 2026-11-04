@@ -1,0 +1,34 @@
+---
+import { methodologyNodes, methodologyDomains, methodologyRoutes, methodologyHub, prototypeImage, systemDescription } from '../data/methodology';
+import '../styles/methodology.css';
+const routes = methodologyRoutes();
+---
+<div class="methodology-scene">
+  <div class="methodology-board" role="group" aria-label="Interactive methodology: ecological inputs, three taxonomies and architectural intelligence">
+    <svg class="methodology-network" viewBox="0 0 900 900" aria-label="Taxonomy domains linked to their centres">
+      <defs><marker id="method-arrow" viewBox="0 0 9 9" refX="8" refY="4.5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0L9 4.5L0 9Z" fill="#303030" /></marker></defs>
+      {methodologyDomains.map(domain => <g>
+        <circle data-domain={domain.id} tabindex="0" role="button" aria-label={`Move ${domain.id} domain; use arrow keys when focused`} aria-describedby="methodology-controls-hint" class={`methodology-domain domain-${domain.id}`} cx={domain.x} cy={domain.y} r={domain.radius} />
+        <circle data-halo={domain.id === 'masterplan' ? 'masterplan-taxonomy' : `${domain.id}-taxonomy`} aria-hidden="true" class={`methodology-halo halo-${domain.id}`} cx={domain.x} cy={domain.y} r="89" />
+      </g>)}
+      {routes.map(route => <path aria-hidden="true" d={route.d} data-from={route.from} data-to={route.to} class:list={['methodology-edge', { 'methodology-feedback': route.from === 'intelligence' }]} marker-end="url(#method-arrow)" />)}
+    </svg>
+    {methodologyNodes.map(node => node.href ? <a class={`methodology-node methodology-taxonomy taxonomy-${node.domain}`} href={node.href} data-node={node.id} data-label={node.label.join(' ')} data-description={node.description} style={`left:${node.x/9}%;top:${node.y/9}%`} aria-label={`Open ${node.label.join(' ')} chapter`} aria-describedby="methodology-detail methodology-controls-hint">
+        <span class="methodology-node-label">{node.label.map(line => <span>{line}</span>)}</span>
+        <img class="methodology-preview" src={node.image} alt={node.imageAlt} width="280" height="280" loading="lazy" decoding="async" />
+      </a> : <button class="methodology-node" type="button" data-node={node.id} data-label={node.label.join(' ')} data-description={node.description} style={`left:${node.x/9}%;top:${node.y/9}%`} aria-describedby="methodology-detail methodology-controls-hint">
+        <span class="methodology-node-dot" aria-hidden="true"></span>
+        <span class="methodology-node-label">{node.label.map(line => <span>{line}</span>)}</span>
+      </button>)}
+    <button class="methodology-hub" type="button" style={`left:${methodologyHub.x/9}%;top:${methodologyHub.y/9}%`} aria-label="Architectural intelligence: show prototype photograph" aria-expanded="false" aria-controls="methodology-prototype">
+      <span class="methodology-hub-label">Architectural<br/>intelligence<small>Machine-learned<br/>feedback system</small></span>
+      <img id="methodology-prototype" class="methodology-prototype" src={prototypeImage} width="1400" height="1050" loading="lazy" alt="Architectural intelligence prototype: a tensile surface above its motor-driven support system" />
+    </button>
+  </div>
+  <div class="methodology-detail" id="methodology-detail" aria-live="polite" aria-atomic="true">
+    <strong>One system. Three taxonomies.</strong><p>{systemDescription}</p>
+  </div>
+  <p class="methodology-hint" id="methodology-controls-hint">Drag a point or taxonomy circle · Arrow keys move focused points · Hover to preview · Select a taxonomy to visit</p>
+  <div class="methodology-controls"><button class="methodology-motion" type="button" aria-pressed="false">Pause motion</button><button class="methodology-reset" type="button">Reset positions</button></div>
+</div>
+<script>import '../scripts/methodology'; import { installDiagramInteraction } from '../scripts/diagram-interaction'; document.querySelectorAll<HTMLElement>('.methodology-scene').forEach(installDiagramInteraction);</script>

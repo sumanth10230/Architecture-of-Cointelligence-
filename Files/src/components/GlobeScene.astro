@@ -1,0 +1,81 @@
+---
+import evidence from '../data/conservation.json';
+import { climatePins, landPins, temperatureColours, temperatureEdges } from '../data/globe-layers';
+const allPins = [...evidence.regions.map(pin=>({...pin,layer:'species'})),...landPins,...climatePins];
+import '../styles/globe-layers.css';
+---
+<div class="globe-scene" data-globe data-layer="species">
+  <div class="globe-viewport" tabindex="0" role="group" aria-label="Rotating globe with data reconstructed from the supplied world map. Drag horizontally or use the left and right arrow keys to rotate." aria-describedby="globe-description">
+    <img class="globe-map-fallback" src="/textures/planet-map-monochrome.webp" loading="lazy" alt="Grey world map with red biodiversity-threat markers, reconstructed from the supplied research map." />
+    <img class="globe-layer-fallback" data-flat-layer="land" src="/textures/human-modification.webp" loading="lazy" alt="Approximate human modification intensity, median observation year 2016." />
+    <img class="globe-layer-fallback" data-flat-layer="climate" src="/textures/temperature-change.webp" loading="lazy" alt="Approximate temperature changes from 1961 to 2019, recoloured in purple and coral." />
+    <img class="globe-layer-fallback" data-flat-layer="climate" src="/textures/climate-coast.svg" loading="lazy" alt="" />
+    <div class="globe-pins" aria-hidden="true">
+      <svg class="globe-pin-leaders">{allPins.map(region => <g data-pin-line={region.id}><line /><circle r="3" /></g>)}</svg>
+      {allPins.map(region => <div class="globe-pin" data-pin={region.id} data-pin-layer={region.layer} hidden>
+        <span class="globe-pin-region">{region.name}</span>
+        <strong>{region.value}</strong>
+        <span class="globe-pin-label">{region.label}</span>
+        <small>{region.date}</small>
+      </div>)}
+    </div>
+  </div>
+  <aside class="globe-layer-panel" aria-label="Globe map layers">
+    <p class="eyebrow">Explore the layers</p>
+    <div class="globe-layer-options">
+      <label><input type="checkbox" data-layer-choice="land" /> <span>Land use <small>Global human modification</small></span></label>
+      <label><input type="checkbox" data-layer-choice="climate" /> <span>Climate change <small>Temperature · 1961–2019</small></span></label>
+    </div>
+    <div class="globe-layer-key" data-layer-key="species">
+      <p><strong>{evidence.kew.value}</strong> of flowering plants estimated at risk</p>
+      <small>Kew · 2023 estimate · original map</small>
+      <button type="button" data-dialog="conservation-sources">Regional figures &amp; sources ↗</button>
+    </div>
+    <div class="globe-layer-key" data-layer-key="land" hidden>
+      <p>Human modification intensity <small>Median observation year 2016</small></p>
+      <div class="layer-colour-bar human-colour-bar" aria-label="Lower to higher human modification, index from 0 to 1"></div>
+      <div class="layer-scale"><span>0 · lower</span><span>1 · higher</span></div>
+      <p class="layer-context">1960–2019 study: <strong>17%</strong> of land changed; <strong>32%</strong> cumulative change, including repeat events.</p>
+      <button type="button" data-dialog="globe-layer-sources">Map, regional context &amp; sources ↗</button>
+    </div>
+    <div class="globe-layer-key" data-layer-key="climate" hidden>
+      <p>Temperature change (°C)</p>
+      <div class="layer-colour-bar temperature-colour-bar" aria-label="Temperature change classes from minus 2 to plus 4.9 degrees Celsius">{temperatureColours.map(colour=><span style={`background:${colour}`}></span>)}</div>
+      <div class="temperature-scale">{temperatureEdges.map(value=><span>{value}</span>)}</div>
+      <small class="no-data-key">Grey · insufficient or unclassified image data</small>
+      <button type="button" data-dialog="globe-layer-sources">Map, temperature figures &amp; sources ↗</button>
+    </div>
+    <p class="layer-mapping-note">Approximate image mapping. Uncheck to return to the original species map.</p>
+  </aside>
+  <p id="globe-description" class="sr-only">Illustrative mapping reconstructed from an image using an assumed equirectangular projection. Point density represents coloured pixels, not measured species counts.</p>
+  <button class="globe-toggle" type="button" hidden aria-pressed="false">Pause rotation</button>
+  <span class="globe-status sr-only" role="status"></span>
+</div>
+<dialog id="globe-layer-sources" class="project-dialog globe-layer-library" aria-labelledby="globe-layer-source-title">
+  <button type="button" class="dialog-close" aria-label="Close map sources">×</button>
+  <div class="dialog-body">
+    <p class="eyebrow">Map evidence</p><h2 id="globe-layer-source-title">A changing planet.</h2>
+    <p>The globe is an approximate visual reconstruction of the supplied maps. Its colours do not provide precise values at individual locations. Labels below retain the source figures and their respective dates.</p>
+    <section><h3>Human modification · median year 2016</h3><p>A 0–1 index of landscape modification, derived at 1 km resolution from 13 human stressors including settlement, agriculture, transport, mining, energy production and electrical infrastructure. This is a snapshot of pressure, not the increase from 1960 to 2019.</p><img src="/images/globe/human-reference.webp" alt="Supplied Global Human Modification on Terrestrial Systems map and legend" loading="lazy" /><p>Map visualisation: Hannah Ker. Data: Kennedy and colleagues, 2020, NASA SEDAC. Reprojected approximately from the supplied image.</p><a href="https://data.nasa.gov/dataset/global-human-modification-of-terrestrial-systems" target="_blank" rel="noopener noreferrer">NASA dataset and citation ↗</a></section>
+    <section><h3>Land-use change · 1960–2019</h3><p>Winkler and colleagues report that 17% of global land changed category at least once. Counting repeated events gives cumulative gross change equivalent to 32% of land area. Figure 1 divides this into 12% single-change contributions and 20% repeat-change contributions to gross change. These are global values, not percentage increases for each continent.</p><img src="/images/globe/land-change-reference.webp" alt="Winkler et al. Figure 1, global land-use change 1960–2019: net 17%, gross 32%" loading="lazy" /><p>The regional pins are examples discussed in the land-change study, independent of the human-modification texture. Continent percentage increases are not provided by Figure 1 and have not been inferred from map colours.</p><ul>{landPins.map(pin=><li><strong>{pin.name}:</strong> {pin.value} · {pin.label}</li>)}</ul><a href="https://www.nature.com/articles/s41467-021-22702-2" target="_blank" rel="noopener noreferrer">Winkler et al., Nature Communications (2021) · CC BY 4.0 ↗</a></section>
+    <section><h3>Temperature change · 1961–2019</h3><p>Warming varies by location. Land warms approximately twice as fast as oceans. The map identifies Franz Josef Land as its highest warming example (+4.9°C), and the Weddell Sea as its highest cooling example (−1.4°C).</p><img src="/images/globe/temperature-reference.webp" alt="Original map of temperature changes, including locations, colour scale, and insufficient-data regions" loading="lazy" /><ul>{climatePins.map(pin=><li><strong>{pin.name}:</strong> {pin.value}</li>)}</ul><p>Scale boundaries (°C): {temperatureEdges.join(', ')}. Grey denotes insufficient or unclassified data. Temperature classes have been recoloured in black, purple and coral; positions are approximate.</p><a href="https://factsonclimate.org/infographics/map-temperature-change" target="_blank" rel="noopener noreferrer">Fakta o klimatu · NASA GISS data · version 2022-05-12 · CC BY 4.0 ↗</a></section>
+    <button type="button" class="archive-close" data-close-dialog>Return to the globe</button>
+  </div>
+</dialog>
+<dialog id="conservation-sources" class="project-dialog conservation-library" aria-labelledby="conservation-title">
+  <button type="button" class="dialog-close" aria-label="Close conservation sources">×</button>
+  <div class="dialog-body">
+    <p class="eyebrow">Research evidence · checked {evidence.checked}</p>
+    <h2 id="conservation-title">Biodiversity under pressure.</h2>
+    <p>{evidence.mode}. These regional examples cover different groups, geographies and years. They cannot be added together or compared as continent totals. Threatened species are at risk; they have not necessarily gone extinct.</p>
+    <article class="conservation-entry"><h3>{evidence.global.value} · worldwide</h3><p>{evidence.global.detail}</p><a href={evidence.global.url} target="_blank" rel="noopener noreferrer">IUCN · {evidence.global.date} ↗</a></article>
+    <article class="conservation-entry"><h3>{evidence.kew.value} · flowering plants worldwide</h3><p>{evidence.kew.label}. {evidence.kew.detail}</p><a href={evidence.kew.url} target="_blank" rel="noopener noreferrer">Royal Botanic Gardens, Kew · {evidence.kew.date} ↗</a></article>
+    {evidence.regions.map(region => <article class="conservation-entry" id={`source-${region.id}`}>
+      <h3>{region.name} · {region.value}</h3><p><strong>{region.label}.</strong> {region.scope} {region.detail}</p>
+      <a href={region.url} target="_blank" rel="noopener noreferrer">{region.source} · {region.date} ↗</a>
+    </article>)}
+    <p>The red points on the globe reproduce the supplied research image. They are independent of these statistics and do not represent counts of threatened species. Pins indicate regions approximately.</p>
+    <button type="button" class="archive-close" data-close-dialog>Return to the globe</button>
+  </div>
+</dialog>
+<script>import '../scripts/globe';</script>

@@ -1,0 +1,21 @@
+---
+import cards from '../data/botanical-cards.json';
+---
+<div class="cards-scene" data-cards aria-label="80 botanical cards in two layers of 40. Scroll from a flat grid into a connected spatial field.">
+  <div class="cards-viewport" aria-hidden="true">
+    <div class="cards-grid-fallback">{cards.slice(0,40).map(card => <img src={card.mobileImage} width="350" height="300" loading="lazy" alt="" />)}</div>
+  </div>
+  <p class="cards-status" role="status">Preparing the botanical archive…</p>
+</div>
+<div class="cards-access"><button type="button" data-dialog="botanical-library">View all 88 cards <span aria-hidden="true">↗</span></button></div>
+<dialog id="botanical-library" class="project-dialog card-library" aria-labelledby="botanical-library-title">
+  <button type="button" class="dialog-close" aria-label="Close botanical archive">×</button>
+  <div class="dialog-body">
+    <p class="eyebrow">The botanical archive</p>
+    <h2 id="botanical-library-title">Species Photocards for Regeneration Clusters</h2>
+    <p>Following t-SNE visualisation and clustering, species data is translated into accessible photocards combining imagery with climate, lifespan, temperature, light, humidity, and soil requirements. Organised by regeneration clusters, the cards make computational results legible, supporting scientific reference and communication of conservation strategies.</p>
+    <div class="card-library-grid">{cards.map(card => <a href={card.image} target="_blank" rel="noopener noreferrer" aria-label={`Open ${card.label}`}><img src={card.image} width="700" height="600" loading="lazy" alt={card.label} /><span>{card.source}</span></a>)}</div>
+    <button type="button" class="archive-close" data-close-dialog>Return to the study</button>
+  </div>
+</dialog>
+<script>import '../scripts/cards';</script>

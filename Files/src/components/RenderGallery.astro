@@ -1,0 +1,8 @@
+---
+import ImageCarousel from './ImageCarousel.astro';
+import { renderSlides } from '../data/site';
+---
+<section id="chapter-finale" class="render-gallery is-static" data-kind="finale" aria-label="Intelligent Biome renders">
+ <h2 class="sr-only" id="chapter-finale-heading">Intelligent Biome</h2>
+ <ImageCarousel slides={renderSlides} label="Intelligent Biome renders" full auto interval={2500} transition="fade" />
+</section>

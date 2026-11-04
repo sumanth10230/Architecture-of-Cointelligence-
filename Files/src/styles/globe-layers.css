@@ -1,0 +1,45 @@
+.globe-layer-panel{position:absolute;left:var(--gutter);bottom:90px;width:32%;max-width:380px;z-index:6;pointer-events:auto;color:#ddd;font-size:11px;line-height:1.45}
+.globe-layer-panel>.eyebrow{font-size:9px;color:#999;margin-bottom:8px}
+.globe-layer-options{display:flex;gap:18px;margin-bottom:12px}
+.globe-layer-options label{display:flex;align-items:flex-start;gap:8px;min-height:44px;cursor:pointer}
+.globe-layer-options input{accent-color:#eb6f8e;margin:2px 0 0;width:14px;height:14px;flex-shrink:0}
+.globe-layer-options small{display:block;font-size:9px;color:#999;margin-top:3px}
+.globe-layer-key{border-top:1px solid #ffffff30;padding-top:10px}
+.globe-layer-key[hidden]{display:none}
+.globe-layer-key p{font-size:11px;line-height:1.45}
+.globe-layer-key small{display:block;font-size:9px;color:#999}
+.globe-layer-key strong{font-weight:400;color:#fff}
+.globe-layer-key[data-layer-key='species'] strong{font-size:21px}
+.globe-layer-key button{display:block;padding:8px 0;background:none;color:#ccc;font-size:10px;min-height:32px;text-decoration:underline;text-underline-offset:4px}
+.layer-colour-bar{height:9px;border:1px solid #ffffff45;margin-top:9px;display:flex;overflow:hidden}
+.human-colour-bar{background:linear-gradient(90deg,#03030a,#641b85 50%,#fa785f)}
+.temperature-colour-bar span{flex:1}
+.layer-scale,.temperature-scale{display:flex;justify-content:space-between;font-size:9px;margin-top:5px;color:#bbb}
+.temperature-scale{font-size:8px}
+.layer-context{margin-top:9px;color:#aaa}
+.layer-mapping-note{font-size:9px;color:#888;margin-top:2px;max-width:350px}
+.no-data-key{margin-top:6px}
+.globe-layer-fallback{position:absolute;width:90%;left:5%;top:50%;transform:translateY(-50%);opacity:0;transition:opacity .7s;pointer-events:none}
+.globe-scene[data-layer='land'] [data-flat-layer='land'],.globe-scene[data-layer='climate'] [data-flat-layer='climate']{opacity:1}
+.globe-map-fallback{transition:opacity .7s}
+.globe-scene:not([data-layer='species']) .globe-map-fallback{opacity:0}
+.globe-scene[data-state='ready'] .globe-layer-fallback{display:none}
+.globe-pin[data-pin-layer='land'] strong{font-size:17px;line-height:1.7}
+.globe-pin[data-pin-layer='land'],.globe-pin[data-pin-layer='climate']{border-top-color:#ee7c86}
+.globe-layer-library{max-width:1100px}
+.globe-layer-library section{margin-top:32px;padding-top:24px;border-top:1px solid #bbb}
+.globe-layer-library h3{font-size:25px;margin-bottom:14px}
+.globe-layer-library section p,.globe-layer-library li{font-size:14px;line-height:1.65;margin:10px 0}
+.globe-layer-library section>a{font-size:12px;text-decoration:underline;display:inline-block;margin:12px 0}
+.globe-layer-library section img{width:100%;height:auto;margin:24px 0}
+@media(min-width:801px){.thesis-chapter[data-kind='globe'] .chapter-copy{top:16%;transform:none;width:34%;max-height:calc(84svh - 370px);overflow-y:auto;pointer-events:auto;scrollbar-width:thin}}
+@media(max-width:800px){
+ .thesis-chapter[data-kind='globe'] .chapter-copy{top:90px;max-height:22svh;overflow-y:auto;pointer-events:auto;scrollbar-width:thin}
+ .globe-layer-panel{left:var(--gutter);right:54px;width:auto;max-width:none;top:34%;bottom:auto;font-size:10px}
+ .globe-layer-options{margin-bottom:2px}.globe-layer-key{padding-top:7px}.globe-layer-key p{font-size:10px}
+ .globe-layer-panel>.eyebrow,.layer-mapping-note{display:none}
+ .globe-viewport{top:57%;height:36%;width:100%}.globe-toggle{bottom:66px;font-size:9px;padding:8px}
+ .globe-layer-key button{padding:4px 0;min-height:26px}.layer-context{margin-top:5px}
+}
+@media(max-height:650px) and (min-width:801px){.globe-layer-panel{bottom:65px}.thesis-chapter[data-kind='globe'] .chapter-copy{top:90px;max-height:calc(100svh - 415px)}.globe-layer-panel>.eyebrow,.layer-mapping-note{display:none}}
+@media(prefers-reduced-motion:reduce){.globe-layer-fallback,.globe-map-fallback{transition:none}}

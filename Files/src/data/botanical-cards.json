@@ -1,0 +1,706 @@
+[
+  {
+    "id": 0,
+    "source": "12.png",
+    "image": "/images/cards/001.webp",
+    "mobileImage": "/images/cards/001-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 12"
+  },
+  {
+    "id": 1,
+    "source": "13.png",
+    "image": "/images/cards/002.webp",
+    "mobileImage": "/images/cards/002-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 13"
+  },
+  {
+    "id": 2,
+    "source": "14.png",
+    "image": "/images/cards/003.webp",
+    "mobileImage": "/images/cards/003-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 14"
+  },
+  {
+    "id": 3,
+    "source": "15_1.png",
+    "image": "/images/cards/004.webp",
+    "mobileImage": "/images/cards/004-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 15_1"
+  },
+  {
+    "id": 4,
+    "source": "16_1.png",
+    "image": "/images/cards/005.webp",
+    "mobileImage": "/images/cards/005-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 16_1"
+  },
+  {
+    "id": 5,
+    "source": "17.png",
+    "image": "/images/cards/006.webp",
+    "mobileImage": "/images/cards/006-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 17"
+  },
+  {
+    "id": 6,
+    "source": "18.png",
+    "image": "/images/cards/007.webp",
+    "mobileImage": "/images/cards/007-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 18"
+  },
+  {
+    "id": 7,
+    "source": "19_1.png",
+    "image": "/images/cards/008.webp",
+    "mobileImage": "/images/cards/008-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 19_1"
+  },
+  {
+    "id": 8,
+    "source": "112.png",
+    "image": "/images/cards/009.webp",
+    "mobileImage": "/images/cards/009-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 112"
+  },
+  {
+    "id": 9,
+    "source": "113.png",
+    "image": "/images/cards/010.webp",
+    "mobileImage": "/images/cards/010-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 113"
+  },
+  {
+    "id": 10,
+    "source": "113_1.png",
+    "image": "/images/cards/011.webp",
+    "mobileImage": "/images/cards/011-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 113_1"
+  },
+  {
+    "id": 11,
+    "source": "114.png",
+    "image": "/images/cards/012.webp",
+    "mobileImage": "/images/cards/012-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 114"
+  },
+  {
+    "id": 12,
+    "source": "115.png",
+    "image": "/images/cards/013.webp",
+    "mobileImage": "/images/cards/013-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 115"
+  },
+  {
+    "id": 13,
+    "source": "116.png",
+    "image": "/images/cards/014.webp",
+    "mobileImage": "/images/cards/014-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 116"
+  },
+  {
+    "id": 14,
+    "source": "117.png",
+    "image": "/images/cards/015.webp",
+    "mobileImage": "/images/cards/015-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 117"
+  },
+  {
+    "id": 15,
+    "source": "118.png",
+    "image": "/images/cards/016.webp",
+    "mobileImage": "/images/cards/016-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 118"
+  },
+  {
+    "id": 16,
+    "source": "119.png",
+    "image": "/images/cards/017.webp",
+    "mobileImage": "/images/cards/017-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 119"
+  },
+  {
+    "id": 17,
+    "source": "119_1.png",
+    "image": "/images/cards/018.webp",
+    "mobileImage": "/images/cards/018-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 119_1"
+  },
+  {
+    "id": 18,
+    "source": "122.png",
+    "image": "/images/cards/019.webp",
+    "mobileImage": "/images/cards/019-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 122"
+  },
+  {
+    "id": 19,
+    "source": "123.png",
+    "image": "/images/cards/020.webp",
+    "mobileImage": "/images/cards/020-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 123"
+  },
+  {
+    "id": 20,
+    "source": "123_1.png",
+    "image": "/images/cards/021.webp",
+    "mobileImage": "/images/cards/021-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 123_1"
+  },
+  {
+    "id": 21,
+    "source": "124.png",
+    "image": "/images/cards/022.webp",
+    "mobileImage": "/images/cards/022-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 124"
+  },
+  {
+    "id": 22,
+    "source": "125.png",
+    "image": "/images/cards/023.webp",
+    "mobileImage": "/images/cards/023-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 125"
+  },
+  {
+    "id": 23,
+    "source": "125_1.png",
+    "image": "/images/cards/024.webp",
+    "mobileImage": "/images/cards/024-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 125_1"
+  },
+  {
+    "id": 24,
+    "source": "126.png",
+    "image": "/images/cards/025.webp",
+    "mobileImage": "/images/cards/025-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 126"
+  },
+  {
+    "id": 25,
+    "source": "127.png",
+    "image": "/images/cards/026.webp",
+    "mobileImage": "/images/cards/026-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 127"
+  },
+  {
+    "id": 26,
+    "source": "128.png",
+    "image": "/images/cards/027.webp",
+    "mobileImage": "/images/cards/027-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 128"
+  },
+  {
+    "id": 27,
+    "source": "129.png",
+    "image": "/images/cards/028.webp",
+    "mobileImage": "/images/cards/028-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 129"
+  },
+  {
+    "id": 28,
+    "source": "132.png",
+    "image": "/images/cards/029.webp",
+    "mobileImage": "/images/cards/029-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 132"
+  },
+  {
+    "id": 29,
+    "source": "133.png",
+    "image": "/images/cards/030.webp",
+    "mobileImage": "/images/cards/030-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 133"
+  },
+  {
+    "id": 30,
+    "source": "134.png",
+    "image": "/images/cards/031.webp",
+    "mobileImage": "/images/cards/031-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 134"
+  },
+  {
+    "id": 31,
+    "source": "135.png",
+    "image": "/images/cards/032.webp",
+    "mobileImage": "/images/cards/032-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 135"
+  },
+  {
+    "id": 32,
+    "source": "136.png",
+    "image": "/images/cards/033.webp",
+    "mobileImage": "/images/cards/033-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 136"
+  },
+  {
+    "id": 33,
+    "source": "136_1.png",
+    "image": "/images/cards/034.webp",
+    "mobileImage": "/images/cards/034-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 136_1"
+  },
+  {
+    "id": 34,
+    "source": "137.png",
+    "image": "/images/cards/035.webp",
+    "mobileImage": "/images/cards/035-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 137"
+  },
+  {
+    "id": 35,
+    "source": "137_1.png",
+    "image": "/images/cards/036.webp",
+    "mobileImage": "/images/cards/036-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 137_1"
+  },
+  {
+    "id": 36,
+    "source": "138.png",
+    "image": "/images/cards/037.webp",
+    "mobileImage": "/images/cards/037-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 138"
+  },
+  {
+    "id": 37,
+    "source": "139.png",
+    "image": "/images/cards/038.webp",
+    "mobileImage": "/images/cards/038-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 139"
+  },
+  {
+    "id": 38,
+    "source": "142.png",
+    "image": "/images/cards/039.webp",
+    "mobileImage": "/images/cards/039-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 142"
+  },
+  {
+    "id": 39,
+    "source": "143.png",
+    "image": "/images/cards/040.webp",
+    "mobileImage": "/images/cards/040-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 143"
+  },
+  {
+    "id": 40,
+    "source": "144.png",
+    "image": "/images/cards/041.webp",
+    "mobileImage": "/images/cards/041-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 144"
+  },
+  {
+    "id": 41,
+    "source": "145.png",
+    "image": "/images/cards/042.webp",
+    "mobileImage": "/images/cards/042-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 145"
+  },
+  {
+    "id": 42,
+    "source": "146.png",
+    "image": "/images/cards/043.webp",
+    "mobileImage": "/images/cards/043-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 146"
+  },
+  {
+    "id": 43,
+    "source": "146_1.png",
+    "image": "/images/cards/044.webp",
+    "mobileImage": "/images/cards/044-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 146_1"
+  },
+  {
+    "id": 44,
+    "source": "147.png",
+    "image": "/images/cards/045.webp",
+    "mobileImage": "/images/cards/045-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 147"
+  },
+  {
+    "id": 45,
+    "source": "148.png",
+    "image": "/images/cards/046.webp",
+    "mobileImage": "/images/cards/046-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 148"
+  },
+  {
+    "id": 46,
+    "source": "148_1.png",
+    "image": "/images/cards/047.webp",
+    "mobileImage": "/images/cards/047-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 148_1"
+  },
+  {
+    "id": 47,
+    "source": "149.png",
+    "image": "/images/cards/048.webp",
+    "mobileImage": "/images/cards/048-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 149"
+  },
+  {
+    "id": 48,
+    "source": "152.png",
+    "image": "/images/cards/049.webp",
+    "mobileImage": "/images/cards/049-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 152"
+  },
+  {
+    "id": 49,
+    "source": "153.png",
+    "image": "/images/cards/050.webp",
+    "mobileImage": "/images/cards/050-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 153"
+  },
+  {
+    "id": 50,
+    "source": "154.png",
+    "image": "/images/cards/051.webp",
+    "mobileImage": "/images/cards/051-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 154"
+  },
+  {
+    "id": 51,
+    "source": "155.png",
+    "image": "/images/cards/052.webp",
+    "mobileImage": "/images/cards/052-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 155"
+  },
+  {
+    "id": 52,
+    "source": "156.png",
+    "image": "/images/cards/053.webp",
+    "mobileImage": "/images/cards/053-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 156"
+  },
+  {
+    "id": 53,
+    "source": "157.png",
+    "image": "/images/cards/054.webp",
+    "mobileImage": "/images/cards/054-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 157"
+  },
+  {
+    "id": 54,
+    "source": "158.png",
+    "image": "/images/cards/055.webp",
+    "mobileImage": "/images/cards/055-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 158"
+  },
+  {
+    "id": 55,
+    "source": "159.png",
+    "image": "/images/cards/056.webp",
+    "mobileImage": "/images/cards/056-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 159"
+  },
+  {
+    "id": 56,
+    "source": "162.png",
+    "image": "/images/cards/057.webp",
+    "mobileImage": "/images/cards/057-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 162"
+  },
+  {
+    "id": 57,
+    "source": "163.png",
+    "image": "/images/cards/058.webp",
+    "mobileImage": "/images/cards/058-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 163"
+  },
+  {
+    "id": 58,
+    "source": "164.png",
+    "image": "/images/cards/059.webp",
+    "mobileImage": "/images/cards/059-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 164"
+  },
+  {
+    "id": 59,
+    "source": "165.png",
+    "image": "/images/cards/060.webp",
+    "mobileImage": "/images/cards/060-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 165"
+  },
+  {
+    "id": 60,
+    "source": "166.png",
+    "image": "/images/cards/061.webp",
+    "mobileImage": "/images/cards/061-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 166"
+  },
+  {
+    "id": 61,
+    "source": "167.png",
+    "image": "/images/cards/062.webp",
+    "mobileImage": "/images/cards/062-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 167"
+  },
+  {
+    "id": 62,
+    "source": "168.png",
+    "image": "/images/cards/063.webp",
+    "mobileImage": "/images/cards/063-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 168"
+  },
+  {
+    "id": 63,
+    "source": "169.png",
+    "image": "/images/cards/064.webp",
+    "mobileImage": "/images/cards/064-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 169"
+  },
+  {
+    "id": 64,
+    "source": "172.png",
+    "image": "/images/cards/065.webp",
+    "mobileImage": "/images/cards/065-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 172"
+  },
+  {
+    "id": 65,
+    "source": "173.png",
+    "image": "/images/cards/066.webp",
+    "mobileImage": "/images/cards/066-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 173"
+  },
+  {
+    "id": 66,
+    "source": "174.png",
+    "image": "/images/cards/067.webp",
+    "mobileImage": "/images/cards/067-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 174"
+  },
+  {
+    "id": 67,
+    "source": "175.png",
+    "image": "/images/cards/068.webp",
+    "mobileImage": "/images/cards/068-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 175"
+  },
+  {
+    "id": 68,
+    "source": "176.png",
+    "image": "/images/cards/069.webp",
+    "mobileImage": "/images/cards/069-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 176"
+  },
+  {
+    "id": 69,
+    "source": "177.png",
+    "image": "/images/cards/070.webp",
+    "mobileImage": "/images/cards/070-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 177"
+  },
+  {
+    "id": 70,
+    "source": "178.png",
+    "image": "/images/cards/071.webp",
+    "mobileImage": "/images/cards/071-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 178"
+  },
+  {
+    "id": 71,
+    "source": "179.png",
+    "image": "/images/cards/072.webp",
+    "mobileImage": "/images/cards/072-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 179"
+  },
+  {
+    "id": 72,
+    "source": "182.png",
+    "image": "/images/cards/073.webp",
+    "mobileImage": "/images/cards/073-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 182"
+  },
+  {
+    "id": 73,
+    "source": "183.png",
+    "image": "/images/cards/074.webp",
+    "mobileImage": "/images/cards/074-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 183"
+  },
+  {
+    "id": 74,
+    "source": "184.png",
+    "image": "/images/cards/075.webp",
+    "mobileImage": "/images/cards/075-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 184"
+  },
+  {
+    "id": 75,
+    "source": "185.png",
+    "image": "/images/cards/076.webp",
+    "mobileImage": "/images/cards/076-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 185"
+  },
+  {
+    "id": 76,
+    "source": "186.png",
+    "image": "/images/cards/077.webp",
+    "mobileImage": "/images/cards/077-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 186"
+  },
+  {
+    "id": 77,
+    "source": "187.png",
+    "image": "/images/cards/078.webp",
+    "mobileImage": "/images/cards/078-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 187"
+  },
+  {
+    "id": 78,
+    "source": "188.png",
+    "image": "/images/cards/079.webp",
+    "mobileImage": "/images/cards/079-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 188"
+  },
+  {
+    "id": 79,
+    "source": "189.png",
+    "image": "/images/cards/080.webp",
+    "mobileImage": "/images/cards/080-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 189"
+  },
+  {
+    "id": 80,
+    "source": "192.png",
+    "image": "/images/cards/081.webp",
+    "mobileImage": "/images/cards/081-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 192"
+  },
+  {
+    "id": 81,
+    "source": "193.png",
+    "image": "/images/cards/082.webp",
+    "mobileImage": "/images/cards/082-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 193"
+  },
+  {
+    "id": 82,
+    "source": "194.png",
+    "image": "/images/cards/083.webp",
+    "mobileImage": "/images/cards/083-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 194"
+  },
+  {
+    "id": 83,
+    "source": "195.png",
+    "image": "/images/cards/084.webp",
+    "mobileImage": "/images/cards/084-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 195"
+  },
+  {
+    "id": 84,
+    "source": "196.png",
+    "image": "/images/cards/085.webp",
+    "mobileImage": "/images/cards/085-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 196"
+  },
+  {
+    "id": 85,
+    "source": "197.png",
+    "image": "/images/cards/086.webp",
+    "mobileImage": "/images/cards/086-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 197"
+  },
+  {
+    "id": 86,
+    "source": "198.png",
+    "image": "/images/cards/087.webp",
+    "mobileImage": "/images/cards/087-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 198"
+  },
+  {
+    "id": 87,
+    "source": "199.png",
+    "image": "/images/cards/088.webp",
+    "mobileImage": "/images/cards/088-mobile.webp",
+    "aspect": 1.16666667,
+    "label": "Botanical research card \u2014 199"
+  }
+]

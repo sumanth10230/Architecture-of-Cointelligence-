@@ -1,0 +1,16 @@
+---
+import { researchMoments } from '../data/site';
+---
+<section class="research-trail" aria-label="Presentations and publications in pictures" data-research-trail>
+ <div class="trail-toolbar"><button type="button" data-trail-pause aria-pressed="false" hidden>Pause image trail</button></div>
+ <div class="trail-viewport" tabindex="0" role="region" aria-label="Research image trail — presentations and exhibitions">
+  <div class="trail-track">
+   {[0,1].map(copy=><div class="trail-group" aria-hidden={copy===1 ? 'true' : undefined} inert={copy===1}>
+    {researchMoments.map((moment,index)=><figure class="trail-card" style={`--photo-ratio:${moment.width / moment.height}`}>
+     {moment.src ? <img src={moment.src} alt={moment.alt} width={moment.width} height={moment.height} loading="lazy" decoding="async" /> : <div class="trail-placeholder" role="img" aria-label={moment.alt}><span>{String(index+1).padStart(2,'0')}</span><small>Image to follow</small></div>}
+    </figure>)}
+   </div>)}
+  </div>
+ </div>
+</section>
+<script>import { installResearchTrail } from '../scripts/research-trail'; installResearchTrail();</script>

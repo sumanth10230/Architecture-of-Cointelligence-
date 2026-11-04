@@ -1,0 +1,51 @@
+---
+import ResearchTrail from '../components/ResearchTrail.astro';
+import Team from '../components/Team.astro';
+import Navigation from '../components/Navigation.astro';
+import RenderGallery from '../components/RenderGallery.astro';
+import Hero from '../components/Hero.astro';
+import ThesisChapter from '../components/ThesisChapter.astro';
+import { chapters } from '../data/chapters';
+import ProjectCard from '../components/ProjectCard.astro';
+import Icon from '../components/Icon.astro';
+import { site, projects, publications } from '../data/site';
+import '../styles/global.css';
+import '../styles/chapters.css';
+import '../styles/studies.css';
+import '../styles/chapter-refinements.css';
+const contactEmail = site.email;
+const contactInstagram = site.instagram === 'https://www.instagram.com/' ? null : site.instagram;
+---
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content={site.description} /><meta name="theme-color" content="#ececea" /><title>{site.name} — {site.title}</title><link rel="icon" type="image/svg+xml" href="/favicon.svg" /></head>
+  <body>
+    <Navigation />
+    <main>
+      <Hero />
+      {chapters.map((chapter,index) => chapter.kind === 'finale' ? <RenderGallery /> : <ThesisChapter chapter={chapter} next={index < chapters.length - 1 ? `#${chapters[index + 1].id}` : '#work'} />)}
+      <section id="work" class="section work-section" aria-labelledby="work-heading">
+        <div class="intro-row"><p class="eyebrow">Research philosophy</p><p class="intro-statement">{site.introduction}</p></div>
+        <div class="section-heading"><h2 id="work-heading">Extended studies<span>01 — 03</span></h2><p>Studies in form & behaviour</p></div>
+        <div class="project-grid">{projects.map((project,index) => <ProjectCard project={project} index={index} />)}</div>
+        <p class="sample-note">Working prototypes · Physical models · Digital studies</p>
+      </section>
+      <section id="research" class="section research-section" aria-labelledby="research-heading">
+        <div class="section-heading"><h2 id="research-heading">Research &<br />publications</h2><p>Ideas in progress<br />An evolving archive</p></div>
+        <div class="research-list">{publications.map(paper => <a class="research-row" href={paper.href} target="_blank" rel="noopener noreferrer"><span class="research-number">{paper.number}</span><div><h3>{paper.title}</h3><p>{paper.description}</p></div><span class="research-type">{paper.type}<small>{paper.source}</small></span><Icon name="arrow" /></a>)}</div>
+      </section>
+      <ResearchTrail />
+      <Team />
+      <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+        <img class="contact-image" src="/images/contact/membrane-band.webp" alt="" width="2400" height="560" loading="lazy" decoding="async" />
+        <div class="contact-content">
+          <p class="eyebrow">Begin a conversation</p>
+          <h2 id="contact-heading"><span>What could we</span>{contactEmail ? <a href={`mailto:${contactEmail}`}>imagine together?<Icon name="arrow" /></a> : <span>imagine together?</span>}</h2>
+          {(contactEmail || contactInstagram) && <div class="contact-details">{contactEmail && <a href={`mailto:${contactEmail}`}>{contactEmail}</a>}{contactInstagram && <div><a href={contactInstagram} target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>}</div>}
+        </div>
+      </section>
+    </main>
+    <footer><a class="wordmark" href="#top" aria-label="Back to beginning">ACI°</a><span>Architecture of Co-Intelligence</span><span>© {new Date().getFullYear()} ACI</span><a href="#top">Back to top ↑</a></footer>
+    <script>import '../scripts/hero'; import '../scripts/chapters'; import '../scripts/interface'; import { installSceneGates } from '../scripts/scene-transitions'; installSceneGates();</script>
+  </body>
+</html>

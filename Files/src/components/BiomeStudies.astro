@@ -1,0 +1,22 @@
+---
+const studies = [
+  { image: 'junction.png', width: 1448, height: 1086, caption: 'Junctions', alt: 'Connected junction cells with pull-down points around the perimeter and a central pull-up point' },
+  { image: 'continuous-linear.png', width: 1448, height: 1086, caption: 'Continuous linear biome', alt: 'A continuous band of connected biome cells with distributed pull-up and pull-down points' },
+  { image: 'isolated.png', width: 1428, height: 1101, caption: 'Isolated Biomes', alt: 'Two isolated biome cells bounded by pull-down points, with pull-up points between them' },
+];
+---
+<div class="biome-shade" aria-hidden="true"></div>
+<div class="biome-studies" role="group" aria-label="Biome configurations and force-point legend">
+  <ul class="biome-legend" aria-label="Force-point legend">
+    <li><span class="biome-dot biome-dot-down" aria-hidden="true"></span>Pull down points</li>
+    <li><span class="biome-dot biome-dot-up" aria-hidden="true"></span>Pull up points</li>
+  </ul>
+  <div class="biome-grid">
+    {studies.map(study => <figure>
+      <a href={`/images/biomes/${study.image}`} target="_blank" rel="noopener noreferrer" aria-label={`Inspect ${study.caption} diagram in a new tab`}>
+        <img src={`/images/biomes/${study.image}`} width={study.width} height={study.height} loading="lazy" decoding="async" alt={study.alt} />
+      </a>
+      <figcaption>{study.caption}</figcaption>
+    </figure>)}
+  </div>
+</div>

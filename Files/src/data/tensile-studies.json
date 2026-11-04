@@ -1,0 +1,54 @@
+[
+  {
+    "iteration": 13,
+    "force": 2,
+    "anchors": 0,
+    "images": [
+      "/images/tensile/iteration-13-1.webp",
+      "/images/tensile/iteration-13-2.webp"
+    ],
+    "originals": [
+      "BB_D_2DCCO_S40_0A_W1_SR0_0A_ISO_Initial Tension.png",
+      "BB_D_2DCCO_S40_0A_W1_SR0_0A_ISO_Relaxed Tension.png"
+    ]
+  },
+  {
+    "iteration": 14,
+    "force": 3,
+    "anchors": 0,
+    "images": [
+      "/images/tensile/iteration-14-1.webp",
+      "/images/tensile/iteration-14-2.webp"
+    ],
+    "originals": [
+      "BB_D_2DVRN_EXP_S100_4A_W1_SR100_3A_ISO_Initial Pull.png",
+      "BB_D_2DVRN_EXP_S100_4A_W1_SR100_3A_ISO_Tension Relaxed.png"
+    ]
+  },
+  {
+    "iteration": 7,
+    "force": 3,
+    "anchors": 6,
+    "images": [
+      "/images/tensile/iteration-7-1.webp",
+      "/images/tensile/iteration-7-2.webp"
+    ],
+    "originals": [
+      "BB_D_2DVRN_EXP_S100_4A_W1_SR100_3A_ISO_Tension Anchored Initial.png",
+      "BB_D_2DVRN_EXP_S100_4A_W1_SR100_3A_ISO_Tension Anchored Relaxed.png"
+    ]
+  },
+  {
+    "iteration": 8,
+    "force": 4,
+    "anchors": 2,
+    "images": [
+      "/images/tensile/iteration-8-1.webp",
+      "/images/tensile/iteration-8-2.webp"
+    ],
+    "originals": [
+      "BB_D_2DVRN_EXP_S100_4A_W1_SR100_2A_ISO_Tension Anchored Initial.png",
+      "BB_D_2DVRN_EXP_S100_4A_W1_SR100_2A_ISO_Tension Anchored Relaxed.png"
+    ]
+  }
+]

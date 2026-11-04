@@ -1,0 +1,32 @@
+---
+import Icon from './Icon.astro';
+import ImageCarousel from './ImageCarousel.astro';
+import type { Study } from '../data/site';
+interface Props { project: Study; index: number; }
+const {project,index}=Astro.props;
+---
+<article class:list={['project',{'project-wide':index===0}]}>
+ {project.slides ? <ImageCarousel slides={project.slides} label={`${project.title} photographs`} auto>
+   <h3 slot="heading">{project.title}</h3>
+   <button slot="action" class="text-link study-expand" data-dialog={`project-${project.id}`} aria-haspopup="dialog">Expand study <Icon name="arrow" /></button>
+ </ImageCarousel> : <><div class="project-image"><img src={project.image} alt={project.alt} width="1600" height="1000" loading="lazy" /></div><div class="project-meta"><h3>{project.title}</h3><button class="text-link study-expand" data-dialog={`project-${project.id}`} aria-haspopup="dialog">Expand study <Icon name="arrow" /></button></div></>}
+ {project.models && <p class="study-introduction">{project.description}</p>}
+ <dialog id={`project-${project.id}`} class="project-dialog" aria-labelledby={`title-${project.id}`}>
+  <button class="dialog-close" aria-label="Close study"><Icon name="close" /></button>
+  {!project.models && <img src={project.image} alt={project.alt} width="1600" height="1000" loading="lazy" />}
+  <div class="dialog-body"><h2 id={`title-${project.id}`}>{project.expandedTitle ?? project.title}</h2>{project.category && <p class="eyebrow">{project.category} / {project.year}</p>}<p>{project.description}</p>{project.detail && <p>{project.detail}</p>}
+   {project.video && <p><a class="text-link" href={project.video.href} target="_blank" rel="noopener noreferrer">{project.video.label}<Icon name="arrow" /></a></p>}
+   {project.drawings?.map(drawing=><section class="prototype-drawing"><h3>{drawing.title}</h3>{drawing.companion ? <div class="prototype-paired-drawings"><img src={drawing.src} alt={drawing.title+' — line drawing'} loading="lazy" /><figure><img src={drawing.companion.src} alt={drawing.companion.title+' — line drawing'} loading="lazy" /><figcaption>{drawing.companion.title}</figcaption></figure></div> : <img src={drawing.src} alt={drawing.title+' — line drawing'} loading="lazy" />}<p>{drawing.description}</p>{drawing.legend.length > 0 && <ol class="drawing-legend" aria-label="Drawing legend">{drawing.legend.map(item=><li>{item}</li>)}</ol>}</section>)}
+   {project.making && <section class="prototype-making"><h3>03 — Making the membrane</h3><div class="prototype-making-row">{project.making.map(photo=><img src={photo.src} alt={photo.alt} loading="lazy" width="720" height="960" />)}</div><p>The membrane layers are hand-stitched to form a cellular network, translating the digital pattern into a flexible tensile surface. These photographs document the stitching process and the assembly of the prototype beneath it.</p></section>}
+   {project.models?.map(model=><section class="model-study"><h3>{model.title}</h3>{model.images ? <div class="digital-views">{model.images.map((src,i)=><img src={src} alt={model.title + " — view " + (i+1)} loading="lazy" />)}</div> : <img src={model.src} alt={model.title} loading="lazy" />}<p>{model.description}</p></section>)}
+   {project.pending && <div class="study-placeholders">{project.pending.map(title=><section><h3>{title}</h3><p>Images and research notes to follow.</p></section>)}</div>}
+   <a class="text-link" href="#contact" data-close-dialog>Discuss the research <Icon name="arrow" /></a>
+  </div>
+ </dialog>
+</article>
+
+<style>
+.digital-views{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:clamp(6px,1vw,16px);align-items:center}
+.model-study .digital-views img{width:100%;height:auto;object-fit:contain;margin:0}
+@media(max-width:600px){.digital-views:has(img:nth-child(2)){grid-auto-columns:minmax(75%,1fr);overflow-x:auto;scroll-snap-type:x proximity}.digital-views img{scroll-snap-align:start}}
+</style>

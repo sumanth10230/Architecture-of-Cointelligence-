@@ -1,0 +1,17 @@
+---
+import { chapters } from '../data/chapters';
+import '../styles/chapter-index.css';
+const entries = [
+  { id: 'top', title: 'Architecture of Co-Intelligence' },
+  ...chapters.map(chapter => ({ id: chapter.id, title: chapter.kind === 'finale' ? 'Intelligent Biome' : chapter.title.replace(/\n/g, ' ').replace(/\.$/, '') })),
+];
+---
+<nav class="chapter-index" aria-label="Thesis chapters" data-tone="dark">
+  <details>
+    <summary aria-label="Open chapter navigation"><span data-current-title>Architecture of Co-Intelligence</span> <span class="chapter-index-count"><span data-current-number>01</span> / {String(entries.length).padStart(2,'0')}</span><span class="chapter-index-toggle" aria-hidden="true">+</span></summary>
+    <ol>
+      {entries.map((entry, index) => <li><a href={`#${entry.id}`} data-chapter-jump data-number={String(index+1).padStart(2,'0')} aria-current={index === 0 ? 'location' : undefined}><span class="chapter-index-number" aria-hidden="true">{String(index+1).padStart(2,'0')}</span><span class="chapter-index-title">{entry.title}</span><span class="chapter-index-mark" aria-hidden="true"></span></a></li>)}
+    </ol>
+  </details>
+</nav>
+<script>import { installChapterIndex } from '../scripts/chapter-index'; installChapterIndex();</script>

@@ -1,0 +1,21 @@
+---
+import { workflows } from '../data/workflows';
+import Icon from './Icon.astro';
+interface Props { kind: 'species' | 'masterplan'; }
+const {kind}=Astro.props;
+const workflow=workflows[kind];
+const prefix=`workflow-${kind}`;
+const src=`/images/workflows/${kind}.png`;
+---
+<div class="workflow-shade" aria-hidden="true"></div>
+<figure class="workflow-studies" aria-label={workflow.title}>
+  <img src={src} alt={workflow.description} width={workflow.width} height={workflow.height} loading="lazy" />
+  <figcaption>Methodology / {kind === 'species' ? 'Ecological relationships' : 'Spatial organisation'}</figcaption>
+  <button type="button" class="workflow-expand text-link" data-dialog={prefix} aria-haspopup="dialog">Explore diagram <Icon name="arrow" /></button>
+</figure>
+<dialog id={prefix} class="workflow-dialog" aria-labelledby={`${prefix}-title`}>
+  <button type="button" class="dialog-close" aria-label="Close diagram"><Icon name="close" /></button>
+  <h2 id={`${prefix}-title`}>{workflow.title}</h2>
+  <div class="workflow-zoom" tabindex="0" aria-label="Scroll to explore the full diagram"><img src={src} alt={workflow.description} width={workflow.width} height={workflow.height} loading="lazy" /></div>
+  <p>{workflow.description}</p>
+</dialog>
